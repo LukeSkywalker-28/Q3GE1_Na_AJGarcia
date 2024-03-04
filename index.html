@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = Math.floor(Math.random() * 1000);
+        const d = new Date();
+
+        document.writeln("Randomly generated number: " +  num)
+
+        if (num < 1000 && num > 100){
+          x = num.toString();
+          y = x.slice();
+
+          hund = y[0] + "00";
+          tens = y[1] + "0";
+          ones = y[2];
+          
+
+          document.writeln("<br>" + "<br>" + "Breakdown: " + hund + "\t" + tens + "\t" + ones)
+          document.writeln("<br>" + d);
+          
+        }
+
+        else if (num < 100){
+          x = num.toString();
+          y = x.slice();
+
+          hund2 = y[0] + "0";
+          tens2 = y[1];
+
+          document.writeln("<br>" + "<br>" + "Breakdown: " + hund2 + "\t" + tens2);
+          
+          document.writeln("<br>" + d);
+        }
+
+        else if (num < 10){
+          x = num.toString();
+          y = x.slice();
+
+          ones2 = y[0];
+          
+          document.writeln("<br>" + ones2);
+          
+          document.writeln("<br>" + d);
+        }
+    </script>
+</body>
+</html>
